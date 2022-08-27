@@ -1,24 +1,22 @@
 
 package com.portfolio.backend.Dto;
 
-import javax.validation.constraints.NotBlank;
 
-
-public class dtoProyecto {
-    @NotBlank
+public class DtoProyectos {
+    
     private String nombreP;
-    @NotBlank
     private String descripcionP;
-    @NotBlank
-    private String foto;
+    private String urlP;
+    private String imgP;
 
-    public dtoProyecto() {
+    public DtoProyectos() {
     }
 
-    public dtoProyecto(String nombreP, String descripcionP, String foto) {
+    public DtoProyectos(String nombreP, String descripcionP, String urlP, String imgP) {
         this.nombreP = nombreP;
         this.descripcionP = descripcionP;
-        this.foto = foto;
+        this.urlP = urlP;
+        this.imgP = imgP;
     }
 
     public String getNombreP() {
@@ -37,12 +35,20 @@ public class dtoProyecto {
         this.descripcionP = descripcionP;
     }
 
-    public String getFoto() {
-        return foto;
+    public String getUrlP() {
+        return urlP;
     }
 
-    public void setFoto(String foto) {
-        this.foto = foto;
+    public void setUrlP(String urlP) {
+        this.urlP = urlP;
+    }
+
+    public String getImgP() {
+        return imgP;
+    }
+
+    public void setImgP(String imgP) {
+        this.imgP = imgP;
     }
     
     

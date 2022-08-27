@@ -13,15 +13,17 @@ public class Proyecto {
     private int id;
     private String nombreP;
     private String descripcionP;
-    private String foto;
-
+    private String urlP;
+    private String imgP;
+    
     public Proyecto() {
     }
 
-    public Proyecto(String nombreP, String descripcionP, String foto) {
+    public Proyecto(String nombreP, String descripcionP, String urlP, String imgP) {
         this.nombreP = nombreP;
         this.descripcionP = descripcionP;
-        this.foto = foto;
+        this.urlP = urlP;
+        this.imgP = imgP;
     }
 
     public int getId() {
@@ -48,14 +50,20 @@ public class Proyecto {
         this.descripcionP = descripcionP;
     }
 
-    public String getFoto() {
-        return foto;
+    public String getUrlP() {
+        return urlP;
     }
 
-    public void setFoto(String foto) {
-        this.foto = foto;
+    public void setUrlP(String urlP) {
+        this.urlP = urlP;
     }
-    
-    
-    
+
+    public String getImgP() {
+        return imgP;
+    }
+
+    public void setImgP(String imgP) {
+        this.imgP = imgP;
+    }
+
 }
