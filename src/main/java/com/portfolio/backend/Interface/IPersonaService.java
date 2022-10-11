@@ -2,19 +2,21 @@ package com.portfolio.backend.Interface;
 
 import com.portfolio.backend.Entity.Persona;
 import java.util.List;
+import java.util.Optional;
 
 
 public interface IPersonaService {
-    //traer una lista de persona
-    public List<Persona> getPersona();
+    public List<Persona> getListPersonas();
     
-    //Guardar un objeto de tipo persona
+    public Optional<Persona> getPersona(int id);
+    
+    public Optional<Persona> getByNombre(String nombre);
+    
     public void savePersona(Persona persona);
     
-    //Eliminar un objeto x ID
+    public void deletePersona(int id);
     
-    public void deletePersona(Long id);
+    public boolean existsById(int id);
     
-    //Buscar persona x ID
-    public Persona findPersona(Long id);
+    public boolean existsByNombre(String nombre);
 }
