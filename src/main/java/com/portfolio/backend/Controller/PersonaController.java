@@ -50,7 +50,7 @@ public class PersonaController {
         if(ipersonaService.existsByNombre(dtoPersona.getNombre())){
             return new ResponseEntity(new Mensaje("Ese nombre ya existe"),HttpStatus.BAD_REQUEST);
         }
-        Persona persona = new Persona(dtoPersona.getNombre(),dtoPersona.getApellido(),dtoPersona.getImg(),dtoPersona.getProfesion(),dtoPersona.getDescripcion());
+        Persona persona = new Persona(dtoPersona.getNombre(),dtoPersona.getApellido(),dtoPersona.getImg(),dtoPersona.getProfesion(),dtoPersona.getDescripcion(),dtoPersona.getBanner());
         ipersonaService.savePersona(persona);
         
         return new ResponseEntity(new Mensaje("Persona creada con exito"),HttpStatus.OK);
@@ -120,6 +120,7 @@ public class PersonaController {
         persona.setImg(dtoPersona.getImg());
         persona.setProfesion(dtoPersona.getProfesion());
         persona.setDescripcion(dtoPersona.getDescripcion());
+        persona.setBanner(dtoPersona.getBanner());
         
         ipersonaService.savePersona(persona);
         

@@ -34,16 +34,19 @@ public class Persona {
     @Lob 
     @Column(name="DESCRIPCION", length=512)
     private String descripcion;
+    
+    private String banner;
 
     public Persona() {
     }
 
-    public Persona(String nombre, String apellido, String img, String profesion, String descripcion) {
+    public Persona(String nombre, String apellido, String img, String profesion, String descripcion, String banner) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.img = img;
         this.profesion = profesion;
         this.descripcion = descripcion;
+        this.banner = banner;
     }
     
     

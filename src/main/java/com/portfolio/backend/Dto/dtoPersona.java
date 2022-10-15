@@ -8,16 +8,26 @@ public class dtoPersona {
     private String img;
     private String profesion;
     private String descripcion;
+    private String banner;
 
     public dtoPersona() {
     }
 
-    public dtoPersona(String nombre, String apellido, String img, String profesion, String descripcion) {
+    public dtoPersona(String nombre, String apellido, String img, String profesion, String descripcion, String banner) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.img = img;
         this.profesion = profesion;
         this.descripcion = descripcion;
+        this.banner = banner;
+    }
+
+    public String getBanner() {
+        return banner;
+    }
+
+    public void setBanner(String banner) {
+        this.banner = banner;
     }
 
     public String getNombre() {
