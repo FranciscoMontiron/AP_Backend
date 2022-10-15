@@ -1,6 +1,8 @@
 
 package com.portfolio.backend.Dto;
 
+import java.util.Calendar;
+
 
 public class DtoProyectos {
     
@@ -8,15 +10,17 @@ public class DtoProyectos {
     private String descripcionP;
     private String urlP;
     private String imgP;
+    private Calendar fecha;
 
     public DtoProyectos() {
     }
 
-    public DtoProyectos(String nombreP, String descripcionP, String urlP, String imgP) {
+    public DtoProyectos(String nombreP, String descripcionP, String urlP, String imgP,Calendar fecha) {
         this.nombreP = nombreP;
         this.descripcionP = descripcionP;
         this.urlP = urlP;
         this.imgP = imgP;
+        this.fecha = fecha;
     }
 
     public String getNombreP() {
@@ -49,6 +53,14 @@ public class DtoProyectos {
 
     public void setImgP(String imgP) {
         this.imgP = imgP;
+    }
+
+    public Calendar getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(Calendar fecha) {
+        this.fecha = fecha;
     }
     
     

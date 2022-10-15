@@ -1,10 +1,13 @@
 
 package com.portfolio.backend.Entity;
 
+import java.util.Calendar;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 public class Proyecto {
@@ -16,14 +19,18 @@ public class Proyecto {
     private String urlP;
     private String imgP;
     
+    @Temporal(TemporalType.DATE)
+    private Calendar fecha;
+    
     public Proyecto() {
     }
 
-    public Proyecto(String nombreP, String descripcionP, String urlP, String imgP) {
+    public Proyecto(String nombreP, String descripcionP, String urlP, String imgP,Calendar fecha) {
         this.nombreP = nombreP;
         this.descripcionP = descripcionP;
         this.urlP = urlP;
         this.imgP = imgP;
+        this.fecha = fecha;
     }
 
     public int getId() {
@@ -66,4 +73,12 @@ public class Proyecto {
         this.imgP = imgP;
     }
 
+    public Calendar getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(Calendar fecha) {
+        this.fecha = fecha;
+    }
+    
 }
