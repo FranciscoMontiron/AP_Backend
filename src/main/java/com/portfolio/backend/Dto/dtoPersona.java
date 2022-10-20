@@ -9,19 +9,29 @@ public class dtoPersona {
     private String profesion;
     private String descripcion;
     private String banner;
+    private String cv;
 
     public dtoPersona() {
     }
 
-    public dtoPersona(String nombre, String apellido, String img, String profesion, String descripcion, String banner) {
+    public dtoPersona(String nombre, String apellido, String img, String profesion, String descripcion, String banner, String cv) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.img = img;
         this.profesion = profesion;
         this.descripcion = descripcion;
         this.banner = banner;
+        this.cv = cv;
     }
 
+    public String getCv() {
+        return cv;
+    }
+
+    public void setCv(String cv) {
+        this.cv = cv;
+    }
+    
     public String getBanner() {
         return banner;
     }
