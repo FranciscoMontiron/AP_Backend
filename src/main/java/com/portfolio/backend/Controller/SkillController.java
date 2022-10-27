@@ -22,7 +22,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 @RestController
 @RequestMapping("/skill")
-@CrossOrigin(origins = "https://backendmontiron.herokuapp.com")
+@CrossOrigin(origins = "https://apportfolio-c34c4.web.app")
+//@CrossOrigin(origins = "http://localhost:4200")
 public class SkillController {
     @Autowired 
     private SkillService skillServ;
